@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for story in data %}
+        <article class="container">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2">{{ story.email }}</a>
+              <small class="text-muted">{{ story.published_at.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <h2><a class="article-title">{{ story.title }}</a></h2>
+            <p class="article-content">{{ story.story }}</p>
+          </div>
+        </article>
+        <br>
+    {% endfor %}
+{% endblock %}

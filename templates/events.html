@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for name,link in events.items() %}
+     <div class="media-body">
+    <div class="card text-center">
+        <h1 class="card-title" > {{ name }} <a href="{{ link }}"  class="btn btn-primary get-started-btn"><u>Join Here</u></a> </h1>
+</div>
+     </div>
+        </br>
+{% endfor %}
+{% endblock content%}

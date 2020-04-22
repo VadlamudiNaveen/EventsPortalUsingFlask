@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for job in data %}
+        <article class="media content">
+    <div class="media-body" >
+    <ul>
+        <h1 class="card-title"> {{ job.role }}</h1>
+             <label style="float: left">Salary:</label> <p> {{ job.salary }} LPA</p>
+             <label style="float: left">Experience:</label> <p> {{ job.experience }} years</p>
+             <label style="float: left">Skills:</label> <p> {{ job.skills }}</p>
+             <label style="float: left">Company:</label> <p> {{ job.company }}</p>
+             <label style="float: left">Lastdate:</label> <p> {{ job.dead_line}}</p>
+             <a href="https://forms.gle/MgVrKLEMF7BuMCrv9"  class="btn btn-primary get-started-btn">Apply here</a>
+    </ul>
+    </div></article>
+{% endfor %}
+{% endblock content%}
